@@ -1,73 +1,119 @@
-import config, discord, requests, json
+import config, discord, hmtai
 from discord.ext import commands
 
-class hentaicog(commands.Cog):
+class Hentai(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self._last_member = None
 
-    @commands.Cog.listener()
-    async def on_member_join(self, member):
-        channel = member.guild.system_channel
-        if channel is not None:
-            await channel.send('Welcome {0.mention}.'.format(member))
+    @commands.command()
+    async def ass(self, ctx):
+        await ctx.send(hmtai.useHM("2_9", "ass"))
 
     @commands.command()
-    async def lolis(self, ctx):
-        await ctx.send('https://media.very.co.uk/i/very/MFWPY_SQ1_0000000099_N_A_SLf?$550x733_standard$')
+    async def bdsm(self, ctx):
+        await ctx.send(hmtai.useHM("2_9", "bsdm"))
+
+    @commands.command()
+    async def cum(self, ctx):
+        await ctx.send(hmtai.useHM("2_9", "cum"))
+
+    @commands.command()
+    async def creampie(self, ctx):
+        await ctx.send(hmtai.useHM("2_9", "creampie"))
+
+    @commands.command()
+    async def manga(self, ctx):
+        await ctx.send(hmtai.useHM("2_9", "manga"))
+
+    @commands.command()
+    async def femdom(self, ctx):
+        await ctx.send(hmtai.useHM("2_9", "femdom"))
 
     @commands.command()
     async def hentai(self, ctx):
-        r = requests.get("https://api.xsky.dev/hentai")
-        data = json.loads(r.content)
-        await ctx.send(data['url'])
+        await ctx.send(hmtai.useHM("2_9", "hentai"))
+
     @commands.command()
-    async def catboy(self, ctx):
-        r = requests.get("https://api.xsky.dev/catboy")
-        data = json.loads(r.content)
-        await ctx.send(data['url'])
+    async def incest(self, ctx):
+        await ctx.send(hmtai.useHM("2_9", "incest"))
+
     @commands.command()
-    async def bsdm(self, ctx):
-        r = requests.get("https://api.xsky.dev/bdsm")
-        data = json.loads(r.content)
-        await ctx.send(data['url'])
+    async def masturbation(self, ctx):
+        await ctx.send(hmtai.useHM("2_9", "masturbation"))
+
     @commands.command()
-    async def furry(self, ctx):
-        r = requests.get("https://api.xsky.dev/furry")
-        data = json.loads(r.content)
-        await ctx.send(data['url'])
+    async def public(self, ctx):
+        await ctx.send(hmtai.useHM("2_9", "public"))
+
     @commands.command()
-    async def ff(self, ctx):
-        r = requests.get("https://api.xsky.dev/ff")
-        data = json.loads(r.content)
-        await ctx.send(data['url'])
+    async def ero(self, ctx):
+        await ctx.send(hmtai.useHM("2_9", "ero"))
+
     @commands.command()
-    async def nekoirl(self, ctx):
-        r = requests.get("https://api.xsky.dev/nekoirl")
-        data = json.loads(r.content)
-        await ctx.send(data['url'])
+    async def orgy(self, ctx):
+        await ctx.send(hmtai.useHM("2_9", "orgy"))
+
     @commands.command()
-    async def neko(self, ctx):
-        r = requests.get("https://api.xsky.dev/neko")
-        data = json.loads(r.content)
-        await ctx.send(data['url'])
+    async def elves(self, ctx):
+        await ctx.send(hmtai.useHM("2_9", "elves"))
+
     @commands.command()
-    async def feet(self, ctx):
-        r = requests.get("https://api.xsky.dev/feet")
-        data = json.loads(r.content)
-        await ctx.send(data['url'])
+    async def yuri(self, ctx):
+        await ctx.send(hmtai.useHM("2_9", "yuri"))
+
     @commands.command()
-    async def trap(self, ctx):
-        r = requests.get("https://api.xsky.dev/trap")
-        data = json.loads(r.content)
-        await ctx.send(data['url'])
+    async def pantsu(self, ctx):
+        await ctx.send(hmtai.useHM("2_9", "pantsu"))
+
+    @commands.command()
+    async def glasses(self, ctx):
+        await ctx.send(hmtai.useHM("2_9", "glasses"))
+
+    @commands.command()
+    async def cuckold(self, ctx):
+        await ctx.send(hmtai.useHM("2_9", "cuckold"))
+
+    @commands.command()
+    async def blowjob(self, ctx):
+        await ctx.send(hmtai.useHM("2_9", "blowjob"))
+
+    @commands.command()
+    async def foot(self, ctx):
+        await ctx.send(hmtai.useHM("2_9", "foot"))
+
+    @commands.command()
+    async def thighs(self, ctx):
+        await ctx.send(hmtai.useHM("2_9", "thighs"))
+
+    @commands.command()
+    async def vagina(self, ctx):
+        await ctx.send(hmtai.useHM("2_9", "vagina"))
+
+    @commands.command()
+    async def ahegao(self, ctx):
+        await ctx.send(hmtai.useHM("2_9", "agegao"))
+
+    @commands.command()
+    async def uniform(self, ctx):
+        await ctx.send(hmtai.useHM("2_9", "uniform"))
+
+    @commands.command()
+    async def gangbang(self, ctx):
+        await ctx.send(hmtai.useHM("2_9", "gangbang"))
+
+    @commands.command()
+    async def tentacles(self, ctx):
+        await ctx.send(hmtai.useHM("2_9", "tentacles"))
+
     @commands.command()
     async def nsfwgif(self, ctx):
-        r = requests.get("https://api.xsky.dev/gif")
-        data = json.loads(r.content)
-        await ctx.send(data['url'])
+        await ctx.send(hmtai.useHM("2_9", "nsfwgif"))
+
     @commands.command()
-    async def futa(self, ctx):
-        r = requests.get("https://api.xsky.dev/futa")
-        data = json.loads(r.content)
-        await ctx.send(data['url'])
+    async def nsfwneko(self, ctx):
+        await ctx.send(hmtai.useHM("2_9", "nsfwneko"))
+
+    @commands.command()
+    async def zetryo(self, ctx):
+        await ctx.send(hmtai.useHM("2_6", "zetRyo"))
