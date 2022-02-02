@@ -1,4 +1,4 @@
-import requests, json, hmtai
+import requests, hmtai
 from discord.ext import commands
 
 class Hentai(commands.Cog):
@@ -101,10 +101,6 @@ class Hentai(commands.Cog):
     @commands.command()
     async def tentacles(self, ctx):
         await ctx.send(hmtai.useHM("2_9", "tentacles"))
-
-    @commands.command()
-    async def nsfwgif(self, ctx):
-        await ctx.send(hmtai.useHM("2_9", "nsfwgif"))
 
     @commands.command()
     async def nsfwneko(self, ctx):

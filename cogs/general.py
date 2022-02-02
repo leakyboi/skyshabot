@@ -7,7 +7,7 @@ class General(commands.Cog):
         self._last_member = None
 
     @commands.command()
-    async def whoami(self, ctx, *, member: discord.Member = None):
+    async def whoami(self, ctx):
         embed=discord.Embed(
             title="Hiya, im Skysha.",
             url="https://leak.cf/",

@@ -1,6 +1,6 @@
 # Imports
 import config, discord
-from cogs.testcog import testcog
+from cogs.music import Music
 from cogs.hentai import Hentai
 from cogs.general import General
 from discord.ext import commands
@@ -30,6 +30,7 @@ async def _reload(self, *, module : str):
 # Loads cogs
 bot.add_cog(Hentai(bot))
 bot.add_cog(General(bot))
+bot.add_cog(Music(bot))
 
 # Starts the bot.
 bot.run(config.token)
