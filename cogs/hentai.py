@@ -1,4 +1,4 @@
-import config, discord, hmtai
+import requests, json, hmtai
 from discord.ext import commands
 
 class Hentai(commands.Cog):
@@ -63,10 +63,6 @@ class Hentai(commands.Cog):
         await ctx.send(hmtai.useHM("2_9", "yuri"))
 
     @commands.command()
-    async def pantsu(self, ctx):
-        await ctx.send(hmtai.useHM("2_9", "pantsu"))
-
-    @commands.command()
     async def glasses(self, ctx):
         await ctx.send(hmtai.useHM("2_9", "glasses"))
 
@@ -92,7 +88,7 @@ class Hentai(commands.Cog):
 
     @commands.command()
     async def ahegao(self, ctx):
-        await ctx.send(hmtai.useHM("2_9", "agegao"))
+        await ctx.send(hmtai.useHM("2_9", "ahegao"))
 
     @commands.command()
     async def uniform(self, ctx):
@@ -117,3 +113,9 @@ class Hentai(commands.Cog):
     @commands.command()
     async def zetryo(self, ctx):
         await ctx.send(hmtai.useHM("2_6", "zetRyo"))
+
+    @commands.command()
+    async def trap(self, ctx):
+        r = requests.get("https://api.xsky.dev/trap")
+        data = r.json()
+        await ctx.send(data["url"])
