@@ -83,10 +83,6 @@ class Hentai(commands.Cog):
         await ctx.send(hmtai.useHM("2_9", "thighs"))
 
     @commands.command()
-    async def vagina(self, ctx):
-        await ctx.send(hmtai.useHM("2_9", "vagina"))
-
-    @commands.command()
     async def ahegao(self, ctx):
         await ctx.send(hmtai.useHM("2_9", "ahegao"))
 
